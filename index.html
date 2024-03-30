@@ -1,47 +1,102 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu editor</title>
-    <script src="https://kit.fontawesome.com/f09990071c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <script src="./js/script.js" defer></script>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--custom css-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/index.js" defer></script>
 </head>
+
 <body>
-    <div id="editor">
-        <div id="bar-tools">
-            <button id="bold">
-                <i class="fa-solid fa-bold"></i>
-            </button>
-            <button id="italic">
-                <i class="fa-solid fa-italic"></i>
-            </button>
-            <button id="underline">
-                <i class="fa-solid fa-underline"></i>
-            </button>
-            <button id="align-left">
-                <i class="fa-solid fa-align-left"></i>
-            </button>
-            <button id="align-center">
-                <i class="fa-solid fa-align-center"></i>
-            </button> 
-            <button id="align-right">
-                <i class="fa-solid fa-align-right"></i>
-            </button>
-            <button id="align-center">
-                <i class="fa-solid fa-align-justify"></i>
-            </button>
-            <button id="list-ul">
-                <i class="fa-solid fa-list-ul"></i>
-            </button>
-            <button id="list-ol">
-                <i class="fa-solid fa-list-ol"></i>
-            </button>
+    <div class="container-editor" id="editor">
+        <div class="tool-bar">
+            <div class="tool-text">
+                <button id="btn-bold">
+                    <i class="bi bi-type-bold"></i>
+                </button>
+                <button id="btn-underline">
+                    <i class="bi bi-type-underline"></i>
+                </button>
+                <button id="btn-italic">
+                    <i class="bi bi-type-italic"></i>
+                </button>
+                <button id="btn-strikethrough">
+                    <i class="bi bi-type-strikethrough"></i>
+                </button>
+                <button id="btn-subscript">
+                    <i class="bi bi-subscript"></i>
+                </button>
+                <button id="btn-superscript">
+                    <i class="bi bi-superscript"></i>
+                </button>
+            </div>
+            <div class="tool-align">
+                <button id="btn-left">
+                    <i class="bi bi-text-left"></i>
+                </button>
+                <button id="btn-center">
+                    <i class="bi bi-text-center"></i>
+                </button>
+                <button id="btn-right">
+                    <i class="bi bi-text-right"></i>
+                </button>
+                <button id="btn-justify">
+                    <i class="bi bi-justify"></i>
+                </button>
+            </div>
+            <div class="tool-list">
+                <button id="btn-ul">
+                    <i class="bi bi-list-ul"></i>
+                </button>
+                <button id="btn-ol">
+                    <i class="bi bi-list-ol"></i>
+                </button>
+            </div>
+            <div class="tool-color">
+                <button id="btn-fill">
+                    <i class="bi bi-pen-fill"></i>
+                </button>
+                <button id="btn-highlighter">
+                    <i class="bi bi-highlighter"></i>
+                </button>
+                <button id="btn-bucket">
+                    <i class="bi bi-paint-bucket"></i>
+                </button>
+            </div>
+            <div class="tool-fonts">
+                <select id="btn-fonts">
+                    <option value="arial">Arial</option>
+                    <option value="times-new-roman">Times new Roman</option>
+                    <option value="consolas">Consolas</option>
+                    <option value="monospace">Monospace</option>
+                </select>
+                <select id="btn-size">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                    <option value="26">26</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                    <option value="72">72</option>
+                </select>
+            </div>
         </div>
-        <textarea id="body" cols="30" rows="10" autofocus></textarea>
+        <div class="body" contenteditable focus>
+        </div>
     </div>
 </body>
+
 </html>

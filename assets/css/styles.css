@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: Arial;
+}
+
+:root {
+    --bg-body: #222;
+    --bg-editor: rgb(0, 128, 85);
+}
+
+body {
+    background: var(--bg-body);
+}
+
+.container-editor{
+    margin: 20px auto;
+    width: 95%;
+    max-width: 600px;
+    background-color: var(--bg-editor);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tool-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.tool-bar button {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    transition: .5s;
+    cursor: pointer;
+    border: none;
+}
+
+.tool-bar button:hover {
+    background:rgba(0, 0, 0, .1);
+    color: black;
+}
+
+.tool-bar select {
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+    padding: 10px 5px;
+    border: none;
+}
+.tool-bar select option{
+    background: #222;
+}
+
+.tool-text,
+.tool-align,
+.tool-list,
+.tool-color {
+    display: flex;
+    gap: 2px;
+}
+
+.body {
+    height: 300px;
+    resize: vertical;
+    background: #eee;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #000;
+    overflow-y: auto;
+}
