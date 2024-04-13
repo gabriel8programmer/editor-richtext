@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    list-style-position: inside;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     width: 98%;
-    max-width: 400px;
+    max-width: 450px;
     margin: 20px auto;
     box-shadow: 1px 1px 10px #000;
     background: #1d1d1d;
@@ -30,34 +31,44 @@ h4 {
 
 .container-tools {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
 .container-tools button {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     background: rgba(255, 255, 255, .1);
     color: white;
     transition: .5s;
     border: none;
 }
+
 .container-tools button.active,
 .container-tools button:hover {
     background: rgba(255, 255, 255, .9);
     color: #000;
 }
 
-.container-tools select {
+.container-tools .btn-format-color {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 40%;
+    font-size: .9rem;
+}
+
+.container-tools .btn-format-color input {
+    width: 40px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+.container-tools .btn-format-select {
     width: 45%;
-    padding: 10px 5px;
+    padding: 5px 0;
 }
 
 #textarea {

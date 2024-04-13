@@ -24,67 +24,92 @@
     <div class="container-editor" id="editor">
         <h4>Meu Editor</h4>
         <div class="container-tools">
-            <button class="btn-mark" id="btn-bold">
+            <!--text tools-->
+            <button class="btn-format" id="btn-bold" data-command="bold" title="Negrito">
                 <i class="fa-solid fa-bold"></i>
             </button>
-            <button class="btn-mark" id="btn-italic">
+            <button class="btn-format-text" id="btn-italic" data-command="italic" title="Italico">
                 <i class="fa-solid fa-italic"></i>
             </button>
-            <button class="btn-mark" id="btn-underline">
+            <button class="btn-format-text" id="btn-underline" data-command="underline" title="Sublinhado">
                 <i class="fa-solid fa-underline"></i>
             </button>
-            <button class="btn-mark" id="btn-strikethrough">
+            <button class="btn-format-text" id="btn-strikethrough" data-command="strikeThrough" title="Riscado">
                 <i class="fa-solid fa-strikethrough"></i>
             </button>
-            <button class="btn-mark" id="btn-subscript">
+            <button class="btn-format-text" id="btn-subscript" data-command="subscript" title="Subscrito">
                 <i class="fa-solid fa-subscript"></i>
             </button>
-            <button class="btn-mark" id="btn-superscript">
+            <button class="btn-format-text" id="btn-superscript" data-command="superscript" title="Sobrescrito">
                 <i class="fa-solid fa-superscript"></i>
             </button>
-            <button class="btn-mark" id="btn-left">
+            <!--link tools-->
+            <button class="btn-format-link" id="btn-link" data-command="createLink" title="Link">
+                <i class="fa-solid fa-link"></i>
+            </button>
+            <button class="btn-format-text" id="btn-unlink" data-command="unlink" title="Remover Link">
+                <i class="fa-solid fa-link-slash"></i>
+            </button>
+            <!--align tools-->
+            <button class="btn-format-text" id="btn-left" data-command="justifyLeft" title="Alinhamento Esquerdo">
                 <i class="fa-solid fa-align-left"></i>
             </button>
-            <button class="btn-mark" id="btn-center">
+            <button class="btn-format-text" id="btn-center" data-command="justifyCenter" title="Alinhamento Centralizado">
                 <i class="fa-solid fa-align-center"></i>
             </button>
-            <button class="btn-mark" id="btn-right">
+            <button class="btn-format-text" id="btn-right" data-command="justifyRight" title="Alinhamento Direito">
                 <i class="fa-solid fa-align-right"></i>
             </button>
-            <button class="btn-mark" id="btn-justify">
+            <button class="btn-format-text" id="btn-justify" data-command="justifyFull" title="Alinhamento Justificado">
                 <i class="fa-solid fa-align-justify"></i>
             </button>
-            <button class="btn-mark" id="btn-ul">
+            <!--list tools-->
+            <button class="btn-format-text" id="btn-ul" data-command="insertUnorderedList" title="Inserir lista não ordenada">
                 <i class="fa-solid fa-list"></i>
             </button>
-            <button class="btn-mark" id="btn-ol">
+            <button class="btn-format-text" id="btn-ol" data-command="insertOrderedList" title="Inserir lista ordenada">
                 <i class="fa-solid fa-list-ol"></i>
             </button>
-            <button class="btn-mark" id="btn-textcolor">
-                <i class="fa-solid fa-font"></i>
-                <div style="width: 20px; height: 5px; background: red;"></div>
+            <!--undo and redo tools-->
+            <button class="btn-format-text" id="btn-undo" data-command="undo" title="Desfazer">
+                <i class="fa-solid fa-rotate-left"></i>
             </button>
-            <button class="btn-mark" id="btn-markcolor">
-                <i class="fa-solid fa-marker"></i>
-                <div style="width: 20px; height: 5px; background: red;"></div>
+            <button class="btn-format-text" id="btn-redo" data-command="redo" title="Refazer">
+                <i class="fa-solid fa-rotate-right"></i>
             </button>
-            <select id="btn-font">
-                <option value="arial">Arial</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="mono">Monospace</option>
-                <option value="consolas">Consolas</option>
+            <!--clear tools-->
+            <button class="btn-format-text" id="btn-removeFormat" data-command="removeFormat" title="Remover Formatação">
+                <i class="fa-solid fa-text-slash"></i>
+            </button>
+            <!--color tools-->
+            <div class="btn-format-color" id="btn-fontColor" data-command="fontColor">
+                <input type="color" id="text-color">
+                <label for="text-color">Cor da Fonte</label>
+            </div>
+            <div class="btn-format-color" id="btn-backColor" data-command="backColor">
+                <input type="color" id="highlight">
+                <label for="highlight">Cor do Contorno</label>
+            </div>
+            <!--font tools-->
+            <select class="btn-format-select" id="btn-heading" data-command="heading">
+                <option value="">Normal</option>
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
             </select>
-            <select id="btn-size">
-                <option value="normal">Normal</option>
-                <option value="h1">H1</option>
-                <option value="h2">H2</option>
-                <option value="h3">H3</option>
-                <option value="h4">H4</option>
-                <option value="h5">H5</option>
-                <option value="h6">H6</option>
+            <select class="btn-format-select" id="btn-font" data-command="fontName">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Monospace">Monospace</option>
+                <option value="Consolas">Consolas</option>
             </select>
         </div>
-        <div id="textarea" contenteditable="true" focus="true"></div>
+        <!--textarea-->
+        <div id="textarea" contenteditable="true"></div>
     </div>
 
 </body>
