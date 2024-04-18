@@ -25,7 +25,7 @@
         <h4>Meu Editor</h4>
         <div class="container-tools">
             <!--text tools-->
-            <button class="btn-format" id="btn-bold" data-command="bold" title="Negrito">
+            <button class="btn-format-text" id="btn-bold" data-command="bold" title="Negrito">
                 <i class="fa-solid fa-bold"></i>
             </button>
             <button class="btn-format-text" id="btn-italic" data-command="italic" title="Italico">
@@ -82,7 +82,7 @@
                 <i class="fa-solid fa-text-slash"></i>
             </button>
             <!--color tools-->
-            <div class="btn-format-color" id="btn-fontColor" data-command="fontColor">
+            <div class="btn-format-color" id="btn-fontColor" data-command="foreColor">
                 <input type="color" id="text-color">
                 <label for="text-color">Cor da Fonte</label>
             </div>
@@ -93,19 +93,19 @@
             <!--font tools-->
             <select class="btn-format-select" id="btn-heading" data-command="heading">
                 <option value="">Normal</option>
-                <option value="H1">H1</option>
-                <option value="H2">H2</option>
-                <option value="H3">H3</option>
-                <option value="H4">H4</option>
-                <option value="H5">H5</option>
-                <option value="H6">H6</option>
+                <option value="h1">H1</option>
+                <option value="h2">H2</option>
+                <option value="h3">H3</option>
+                <option value="h4">H4</option>
+                <option value="h5">H5</option>
+                <option value="h6">H6</option>
             </select>
             <select class="btn-format-select" id="btn-font" data-command="fontName">
-                <option value="Arial">Arial</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Monospace">Monospace</option>
-                <option value="Consolas">Consolas</option>
+                <option value="arial" selected>Arial</option>
+                <option value="times new roman">Times New Roman</option>
+                <option value="helvetica">Helvetica</option>
+                <option value="monospace">Monospace</option>
+                <option value="consolas">Consolas</option>
             </select>
         </div>
         <!--textarea-->
