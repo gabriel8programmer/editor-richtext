@@ -62,12 +62,26 @@ h4 {
     font-size: .9rem;
 }
 
-.container-tools .btn-format-color input {
-    border-radius: 5px;
-    border: 1px solid #fff;
+/* Estilizando o input[type="color"] */
+input[type="color"] {
+    /* Define o tamanho */
+    width: 50px;
+    height: 30px;
+    /* Remove a aparência padrão */
+    appearance: none;
+    -webkit-appearance: none;
+    /* Define a cor de fundo padrão */
+    background-color: transparent;
+    /* Define uma borda */
+    border: 1px solid #ccc;
+    /* Adiciona algum espaço entre a borda e o seletor de cor */
+    padding: 3px;
+    /* Define uma borda arredondada */
+    border-radius: 5px; /* Altere o valor conforme necessário */
 }
+
 .container-tools .btn-format-select {
-    width: 45%;
+    width: 70%;
     padding: 5px 0;
     border-radius: 5px;
 }

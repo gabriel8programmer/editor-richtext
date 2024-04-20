@@ -2,8 +2,9 @@
 //buttons's element
 const btnsFormatText = document.querySelectorAll(".btn-format-text");
 const btnFormatLink = document.querySelector(".btn-format-link");
-const btnsFormatColor = document.querySelectorAll(".btn-format-color input");
+const btnsFormatColor = document.querySelectorAll(".btn-format-color input[type='color']");
 const btnsFormatSelect = document.querySelectorAll(".btn-format-select");
+const btnFormatRange = document.querySelector(".btn-format-range input[type='range']");
 
 //get all elements
 function focusTextArea(){
@@ -62,9 +63,22 @@ function formatSelect(e){
     focusTextArea();
 }
 
+function formatRange(e){
+    //get the command in data-command of the element
+    const command = e.target.parentNode.dataset.command;
+    const arg = e.target.value;
+
+    //create command
+    exeCmd(command, arg);
+
+    //set focus in textarea
+    focusTextArea();
+}
+
 //events
 window.addEventListener("load", focusTextArea);
 btnsFormatText.forEach(button => button.addEventListener("click", formatText));
 btnFormatLink.addEventListener("click", formatLink);
 btnsFormatColor.forEach(button => button.addEventListener("input", formatColor));
 btnsFormatSelect.forEach(button => button.addEventListener("input", formatSelect));
+btnFormatRange.addEventListener("input", formatRange);

@@ -83,23 +83,14 @@
             </button>
             <!--color tools-->
             <div class="btn-format-color" id="btn-fontColor" data-command="foreColor">
-                <input type="color" id="text-color">
-                <label for="text-color">Cor da Fonte</label>
+                <input type="color" id="text-color" value="#ffffff">
+                <label for="text-color" value="#111111">Cor da Fonte</label>
             </div>
             <div class="btn-format-color" id="btn-backColor" data-command="backColor">
                 <input type="color" id="highlight">
                 <label for="highlight">Cor do Contorno</label>
             </div>
             <!--font tools-->
-            <select class="btn-format-select" id="btn-heading" data-command="heading">
-                <option value="">Normal</option>
-                <option value="h1">H1</option>
-                <option value="h2">H2</option>
-                <option value="h3">H3</option>
-                <option value="h4">H4</option>
-                <option value="h5">H5</option>
-                <option value="h6">H6</option>
-            </select>
             <select class="btn-format-select" id="btn-font" data-command="fontName">
                 <option value="arial" selected>Arial</option>
                 <option value="times new roman">Times New Roman</option>
@@ -107,6 +98,11 @@
                 <option value="monospace">Monospace</option>
                 <option value="consolas">Consolas</option>
             </select>
+            <div class="btn-format-range" data-command="fontSize" title="fonte do texto">
+                <span>1</span>
+                <input type="range" min="1" max="7" value="4">
+                <span>7</span>
+            </div>
         </div>
         <!--textarea-->
         <div id="textarea" contenteditable="true"></div>
